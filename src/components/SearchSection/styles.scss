@@ -1,0 +1,35 @@
+@import "styles/utils";
+
+.search {
+  background: url("../../../public/assets/images/search-bg.png");
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-size: cover;
+
+  > h1 {
+    margin: 0;
+    color: $gold;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  > p {
+    margin: 0 0 40px;
+  }
+
+  input {
+    background-color: transparent;
+    border: 1px solid $white-2;
+    border-radius: 5px;
+    color: $white-2;
+    padding: 10px;
+    width: 400px;
+    outline: none;
+    background: url("../../../public/assets/images/search-copy.png") no-repeat;
+    background-position: 390px;
+  }
+}
