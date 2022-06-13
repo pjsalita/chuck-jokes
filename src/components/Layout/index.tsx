@@ -1,3 +1,4 @@
+import { Header } from "components";
 import { FC, ReactNode } from "react";
 
 interface Props {
@@ -5,5 +6,11 @@ interface Props {
 }
 
 export const Layout: FC<Props> = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <div>
+      <Header />
+
+      {children}
+    </div>
+  );
 };

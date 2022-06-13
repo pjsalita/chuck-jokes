@@ -1,0 +1,92 @@
+@import "styles/utils";
+
+.header {
+  background-color: $header-bg;
+  height: $header-height;
+  display: flex;
+  position: relative;
+
+  .container {
+    margin: auto;
+    width: 100%;
+  }
+
+  .toggle-menu {
+    background-color: transparent;
+    border: none;
+    color: $white-2;
+    padding: 20px;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &.show {
+      display: block;
+      position: absolute;
+      top: $header-height;
+      background-color: $header-bg;
+      width: 100%;
+
+      @include breakpoint(md) {
+        position: relative;
+        top: unset;
+        display: flex;
+      }
+    }
+
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    > li {
+      padding: 20px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      color: $white-2;
+      text-transform: uppercase;
+    }
+
+    > li.dropdown {
+      background-color: $gold;
+      position: relative;
+
+      > span {
+        margin-right: 20px;
+      }
+
+      > ul {
+        display: none;
+        position: absolute;
+        background: white;
+        color: black;
+        left: 0;
+        top: 58.5px;
+        text-transform: initial;
+        list-style: none;
+
+        &.show {
+          display: block;
+          width: 100%;
+          padding: 10px 30px;
+
+          > li {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.43;
+            color: $black-light;
+          }
+        }
+      }
+    }
+  }
+}
