@@ -23,3 +23,13 @@ $warning-pale: #ffbe5b;
 $info: #57dbe6;
 $header-bg: #242424;
 $header-height: 58.5px;
+
+$category-colors: (
+  "1": $danger,
+  "2": $warning,
+  "3": $warning-pale,
+  "4": $gold-light,
+  "5": $success-pale,
+  "6": $success,
+  "7": $info,
+);
