@@ -19,13 +19,11 @@ export const Categories: FC = memo(() => {
   }, [categories]);
 
   return (
-    <div className="categories container">
-      <div>
-        {categories.map((cat) => (
-          <Category key={cat} name={cat} />
-        ))}
-        <Category name="View All" viewAll />
-      </div>
+    <div className="categories">
+      {categories.map((cat) => (
+        <Category key={cat} name={cat} />
+      ))}
+      <Category name="View All" viewAll />
     </div>
   );
 });

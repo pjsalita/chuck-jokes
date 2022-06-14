@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC } from "react";
 import { http } from "utils";
 import "./styles.scss";
 

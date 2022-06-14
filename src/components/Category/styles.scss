@@ -1,30 +1,9 @@
 @import "styles/utils";
 
 .category {
-  background-color: $gold;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1.43;
-  text-align: center;
-  padding: 10px 0;
-  color: $white-2;
-  width: 206px;
-  height: 20px;
-
   @each $i, $category-color in $category-colors {
     &:nth-child(7n + #{$i}) {
       background-color: $category-color;
     }
-  }
-
-  &:hover {
-    outline: 1px solid black;
-  }
-
-  &.view-all {
-    outline: 1px solid $gold;
-    background-color: transparent;
-    color: $gold;
   }
 }

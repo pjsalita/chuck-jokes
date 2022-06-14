@@ -1,5 +1,6 @@
 import { Header, SearchSection } from "components";
 import { FC, ReactNode } from "react";
+import "./styles.scss";
 
 interface Props {
   children?: ReactNode;
@@ -7,7 +8,7 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children }) => {
   return (
-    <div>
+    <div className="layout">
       <Header />
       <SearchSection />
 

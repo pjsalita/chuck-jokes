@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import { Button } from "components";
 import { FC, memo } from "react";
 import { BsArrowDown } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import "./styles.scss";
 
 interface Props {
@@ -11,11 +11,11 @@ interface Props {
 
 export const Category: FC<Props> = memo(({ name, viewAll }) => {
   return (
-    <Link
-      to={viewAll ? "/" : `/category/${name}`}
-      className={clsx("category", { "view-all": viewAll })}
+    <Button
+      link={viewAll ? "/" : `/category/${name}`}
+      className={clsx("category", { ghost: viewAll })}
     >
       {name} {viewAll && <BsArrowDown />}
-    </Link>
+    </Button>
   );
 });

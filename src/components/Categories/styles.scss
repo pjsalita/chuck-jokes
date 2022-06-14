@@ -2,15 +2,11 @@
 
 .categories {
   margin: 50px auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
 
-  > div {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin: auto;
-
-    @include breakpoint(md) {
-      gap: 20px;
-    }
+  @include breakpoint(md) {
+    gap: 20px;
   }
 }
